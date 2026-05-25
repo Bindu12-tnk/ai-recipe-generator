@@ -51,7 +51,7 @@ There is no authentication in this app — it is a single-user tool focused enti
 ---
 
 ## 🧠 Application Flow
-   ## 🧠 Application Flow
+   
 
 User uploads a food photo
         ↓
