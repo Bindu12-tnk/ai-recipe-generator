@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #111827, #1f2937);
+  color: #f9fafb;
+}
+
+a {
+  color: #fbbf24;
+  font-weight: bold;
+}
+
+.home-page {
+  min-height: 100vh;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.hero-section h1 {
+  font-size: 52px;
+  margin: 30px 0 10px;
+}
+
+.hero-section p {
+  font-size: 20px;
+  color: #d1d5db;
+}
+
+.upload-section {
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.drop-zone {
+  border: 2px dashed #fbbf24;
+  border-radius: 20px;
+  padding: 35px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.drop-zone:hover {
+  transform: scale(1.01);
+}
+
+.preview-image {
+  max-width: 100%;
+  max-height: 520px;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.ingredients-section,
+.filter-section,
+.action-section {
+  max-width: 850px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+button {
+  border: none;
+  padding: 10px 18px;
+  margin: 6px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #fbbf24;
+  color: #111827;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #f59e0b;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-message {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 12px;
+  background: #7f1d1d;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 36px;
+  }
+
+  .hero-section p {
+    font-size: 16px;
+  }
+}

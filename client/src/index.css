@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.main-content {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+a {
+  color: #fbbf24;
+  font-weight: bold;
+  margin: 0 8px;
+}
+
+.hero-section h1 {
+  font-size: 56px;
+  margin: 35px 0 10px;
+  color: white;
+}
+
+.hero-section p {
+  font-size: 20px;
+  color: #cbd5e1;
+}
+
+.upload-section,
+.ingredients-section,
+.filter-section,
+.action-section {
+  max-width: 850px;
+  margin: 25px auto;
+  padding: 25px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.drop-zone {
+  border: 2px dashed #fbbf24;
+  border-radius: 20px;
+  padding: 35px;
+  cursor: pointer;
+}
+
+.preview-image {
+  max-width: 100%;
+  max-height: 520px;
+  border-radius: 18px;
+}
+
+button {
+  border: none;
+  padding: 10px 18px;
+  margin: 6px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #fbbf24;
+  color: #111827;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #f59e0b;
+}
+
+input {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+}
+
+.error-message {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 12px;
+  background: #7f1d1d;
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 36px;
+  }
+}
