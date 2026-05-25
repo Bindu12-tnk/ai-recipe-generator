@@ -53,23 +53,35 @@ There is no authentication in this app — it is a single-user tool focused enti
 ## 🧠 Application Flow
    ## 🧠 Application Flow
 
-```mermaid
-graph TD
-    A[📸 Upload Image] --> B[🤖 Groq Vision AI]
-    B --> C[🥕 Detect Ingredients]
-    C --> D[✏️ Edit Ingredients]
-    D --> E[🧠 Groq Text AI]
-    E --> F[🍽️ Generate Recipe]
-    F --> G[💾 Save to MongoDB]
+User uploads a food photo
+        ↓
+Frontend (React) sends the image to the Backend (Express API)
+        ↓
+Backend converts image to Base64
+        ↓
+Groq Vision (LLaMA 4 Scout) analyzes the image
+        ↓
+Returns a JSON array of detected ingredient names
+        ↓
+User reviews, edits, and adds/removes ingredients
+User optionally selects a dietary preference
+        ↓
+Option A: "Generate Recipe"
+    → Groq Text (LLaMA 3.3 70B) generates a single complete recipe (title,
+      ingredients, step-by-step instructions, nutrition, tags, suggestions)
+    → Recipe displayed in full on the Result page
+    → User can Save recipe to MongoDB
 
-    style A fill:#ffcccb,stroke:#333
-    style B fill:#c2f0c2,stroke:#333
-    style C fill:#cce5ff,stroke:#333
-    style D fill:#fff3cd,stroke:#333
-    style E fill:#d5c6ff,stroke:#333
-    style F fill:#b2f7ef,stroke:#333
-    style G fill:#ffd6a5,stroke:#333
----
+Option B: "Get Suggestions"
+    → Groq Text (LLaMA 3.3 70B) generates 3 quick recipe options
+    → User clicks one suggestion
+    → Full recipe generated for that selection → same Result flow as Option A
+
+Saved Recipes page:
+    → Fetch all saved recipes from MongoDB
+    → Client-side filter by diet, difficulty, or title search
+    → Click a recipe card → full detail view
+    → Delete any saved recipe
 
 ## ⚙️ Core Features
 
