@@ -51,19 +51,24 @@ There is no authentication in this app — it is a single-user tool focused enti
 ---
 
 ## 🧠 Application Flow
-   User Uploads Image
-↓
-Groq Vision Model (AI)
-↓
-Detected Ingredients
-↓
-User Edits Ingredients
-↓
-Groq Text Model (AI)
-↓
-Generated Recipe
-↓
-Save to MongoDB
+   ## 🧠 Application Flow
+
+```mermaid
+graph TD
+    A[📸 Upload Image] --> B[🤖 Groq Vision AI]
+    B --> C[🥕 Detect Ingredients]
+    C --> D[✏️ Edit Ingredients]
+    D --> E[🧠 Groq Text AI]
+    E --> F[🍽️ Generate Recipe]
+    F --> G[💾 Save to MongoDB]
+
+    style A fill:#ffcccb,stroke:#333
+    style B fill:#c2f0c2,stroke:#333
+    style C fill:#cce5ff,stroke:#333
+    style D fill:#fff3cd,stroke:#333
+    style E fill:#d5c6ff,stroke:#333
+    style F fill:#b2f7ef,stroke:#333
+    style G fill:#ffd6a5,stroke:#333
 ---
 
 ## ⚙️ Core Features
