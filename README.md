@@ -52,19 +52,18 @@ There is no authentication in this app — it is a single-user tool focused enti
 
 ## 🧠 Application Flow
    User Uploads Image
-        ↓
+↓
 Groq Vision Model (AI)
-        ↓
+↓
 Detected Ingredients
-        ↓
+↓
 User Edits Ingredients
-        ↓
+↓
 Groq Text Model (AI)
-        ↓
+↓
 Generated Recipe
-        ↓
+↓
 Save to MongoDB
-
 ---
 
 ## ⚙️ Core Features
